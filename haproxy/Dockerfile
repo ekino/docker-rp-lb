@@ -8,7 +8,7 @@ ENV HAPROXY_VERSION 1.5
 
 # prerequisites
 RUN apt-get update
-RUN apt-get install -y curl supervisor inotify-tools openssl vim
+RUN apt-get install -y curl supervisor openssl vim
 
 # install haproxy
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 505D97A41C61B9CD
