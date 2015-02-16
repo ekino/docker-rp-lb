@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - ./helper.sh clear:all build run
+
+test:
+  pre:
+    - sleep 5
+  override:
+    - docker logs reverseproxy.local
