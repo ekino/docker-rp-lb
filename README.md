@@ -59,7 +59,10 @@ docker run --name reverseproxy.local -d \
   ekino/haproxy:base
 ```
 
-### No SSL
+### Enable HTTP
+
+We use HTTPS by default. To enable HTTP just export port 80 and provide a
+configuration file with the relevant bindings:
 
 ```bash
 docker run --name reverseproxy.local -d \
