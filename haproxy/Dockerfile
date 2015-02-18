@@ -23,6 +23,7 @@ RUN rm -rf /var/lib/apt/lists
 # configure
 RUN mkdir -p /opt/haproxy.cfg.d
 ADD haproxy.cfg /etc/haproxy/haproxy.cfg
+ADD rsyslog.conf /etc/rsyslog.d/49-haproxy.conf
 ADD showstat.sh /showstat.sh
 ADD supervisord.conf /etc/supervisor/conf.d/haproxy.conf
 
